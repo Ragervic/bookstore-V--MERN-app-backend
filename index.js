@@ -32,7 +32,7 @@ DB_URL = "mongodb+srv://mutisov261:FDa7b7rmhgmiHbAC@cluster0.h3vkn.mongodb.net/b
 
 async function main() {
     await mongoose.connect(DB_URL)//process.env.DB_URL
-    app.get("/", (req, res) => {
+    app.use("/", (req, res) => {
         res.send('Book-store server is running')
     })
 }
